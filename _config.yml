@@ -1,0 +1,54 @@
+# Book settings
+# Learn more at https://jupyterbook.org/customize/config.html
+
+title: Prueba de tesis con jupyterbook
+author: Cesar Vilca - 2024
+logo: docs/favicon.png
+# copyright: "2024" 
+exclude_patterns: ["cache", "**.ipynb_checkpoints"]
+
+repository:
+  url: https://github.com/vilcagamarracf/Inv_arroz_METRIC # Online location of your book
+  path_to_book: docs  # Optional path to your book, relative to the repository root
+  branch: main  # Which branch of the repository should be used when creating links (optional)
+
+# Force re-execution of notebooks on each build.
+# See https://jupyterbook.org/content/execute.html
+execute:
+  execute_notebooks         : "cache"  # Whether to execute notebooks at build time. Must be one of ("auto", "force", "cache", "off")
+  cache                     : "cache"
+
+parse:
+  myst_enable_extensions:
+    # don't forget to list any other extensions you want enabled,
+    # including those that are enabled by default! See here: https://jupyterbook.org/en/stable/customize/config.html
+    - html_image
+
+latex:
+  latex_documents:
+    targetname: book.tex
+
+sphinx:
+  config:
+    language: es
+    html_show_copyright: false
+
+bibtex_bibfiles:
+  - references.bib
+
+# Add GitHub buttons to your book
+# See https://jupyterbook.org/customize/config.html#add-a-link-to-your-repository
+html:
+  favicon                   : "docs/favicon.png"  # A path to a favicon image
+  use_issues_button         : false  # Whether to add an "open an issue" button
+  use_repository_button: true
+  extra_footer              : |
+    <p>
+        <a href="https://github.com/vilcagamarracf">github.com/vilcagamarracf</a>
+    </p>
+  extra_navbar              : |
+        <div>
+            <a href="https://github.com/vilcagamarracf">Cesar Vilca</a>
+        </div>  
+  home_page_in_navbar       : true  # Whether to include your home page in the left Navigation Bar
+  google_analytics_id       : ""  # A GA id that can be used to track book views.

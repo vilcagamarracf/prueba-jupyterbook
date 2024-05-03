@@ -1,0 +1,15 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: README
+
+parts:
+  - caption: Desarrollo
+    numbered: True
+    chapters:
+    - file: 1_Explorar_imagenes_local
+    - file: 2_Exploracion_datos_estacion
+    - file: 3_H_Desarrollo
+    - file: 4_Seleccion_pixeles
+    - file: 5_Modelo_METRIC
